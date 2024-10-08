@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 import { Square } from './components/Square.jsx'
-import { TURNS, WINNER_COMBOS } from './constants.jsx'
+import { TURNS } from './constants.jsx'
 import { checkWinner } from './logic/board.jsx'
 import { WinnerModal } from './components/WinnerModal.jsx'
 import { checkEndGame } from './logic/board.jsx'
@@ -61,7 +61,7 @@ function App() {
 
   useEffect(()=>{
     console.log('UseEffect')
-  }, [winner == TURNS.X])
+  }, [winner])
 
   return(
     <main className='board'>

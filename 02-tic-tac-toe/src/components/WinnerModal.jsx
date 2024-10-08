@@ -1,4 +1,11 @@
 import { Square } from "./Square.jsx"
+import PropTypes from 'prop-types';
+
+WinnerModal.propTypes = {
+    winner: PropTypes.oneOfType([PropTypes.string, PropTypes.bool, PropTypes.oneOf([null])]),
+    resetGame: PropTypes.func.isRequired
+};
+
 
 export function WinnerModal({winner, resetGame}){
     if (winner == null) return null
