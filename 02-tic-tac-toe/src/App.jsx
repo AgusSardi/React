@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 import { Square } from './components/Square.jsx'
@@ -58,6 +58,10 @@ function App() {
       setWinner(false)
     }
   }
+
+  useEffect(()=>{
+    console.log('UseEffect')
+  }, [winner == TURNS.X])
 
   return(
     <main className='board'>
